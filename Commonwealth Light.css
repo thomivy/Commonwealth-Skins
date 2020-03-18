@@ -1,0 +1,555 @@
+/*Variables*/
+:root {
+    --brand-color: #031271;
+    --border-color: #d6d6d6;
+    --brand-font-family: "PT Sans", "Source Sans Pro", "Inter", "sans-serif";
+    --brand-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1), 1px 1px 0px 0px rgba(0, 0, 0, 0.1);
+    --hover-bg-color: #f5f5f5;
+}
+
+
+
+html {
+    font-family: var(--brand-font-family);
+    background-color: #fff;
+}
+
+.col-sm-4,
+.col-md-7 {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    width: 100%;
+    border-left: 1px solid var(--border-color);
+}
+
+.ListingPage .page-container {
+    background: #fff;
+}
+
+
+/*Header*/
+.Header {
+    background: white;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.Header a.header-logo {
+    padding: 16px 0 0px;
+    margin-right: 24px;
+    margin-bottom: 0px;
+    margin-left: 24px;
+}
+
+.Header a.header-logo .header-logo-image {
+    display: inline-block;
+    color: #000000;
+    background-color: white;
+    text-decoration: none;
+    width: 24px;
+    height: 24px;
+    background: url(/static/img/logo.png);
+    background-size: cover;
+    filter: invert(1);
+}
+
+.AccountMenu .User a.user-display-name.username {
+    color: var(--brand-color);
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.NotificationMenu .notification-count {
+    padding: 1px 8px 1px 8px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 9999px;
+    color: #6c6c6c;
+    background-color: var(--border-color);
+    margin-top: -1px;
+    top: 1px;
+    position: relative;
+}
+
+.ChainLabel .ChainIcon img.chain-icon {
+    width: 20px;
+    height: 20px;
+    margin: -5px;
+    margin-left: -5px;
+    margin-right: 7px;
+    filter: invert(1);
+}
+
+.ChainLabel {
+    display: inline-block;
+    margin: 12px 0px;
+    margin-right: 12px;
+    padding: 10px 24px;
+    border-radius: 2px;
+    background: var(--hover-bg-color);
+    color: var(--brand-color);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 0px;
+}
+
+.ChainLabel::selection {
+    color: #4a4a4a;
+    background: transparent;
+}
+
+.Header .menu-selector {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 14px;
+    padding: 17px 20px 0px 16px;
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--brand-color);
+}
+
+.Header .menu-dropdown {
+    position: absolute;
+    right: 0;
+    top: 51px;
+    font-size: 15px;
+    animation: popout 0.05s ease;
+    -webkit-animation: popout 0.05s ease;
+    color: #141414;
+    z-index: 9999;
+    background: white !important;
+    border-radius: 0 0 2px 2px;
+    border: 1px solid var(--border-color);
+}
+
+
+.Header .menu-dropdown ul li.divider {
+    border-bottom: 1px solid var(--border-color);
+}
+.Header .menu-dropdown.open ul li.divider {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.Header .NavigationMenu .menu-dropdown.open {
+    position: absolute;
+    right: 0;
+    top: 51px;
+    font-size: 15px;
+    animation: popout 0.05s ease;
+    -webkit-animation: popout 0.05s ease;
+    color: #141414;
+    z-index: 9999;
+    background: white !important;
+    border-radius: 0 0 2px 2px;
+    border: 1px solid var(--border-color);
+}
+
+/*Notification Dropdown*/
+.NotificationMenu .menu-dropdown ul.notification-list li.NotificationRow .comment-body .comment-body-excerpt {
+    margin: 0px 0 2px;
+    font-size: 14px;
+    color: #202020;
+}
+.NotificationMenu .menu-dropdown ul.notification-list li.HeaderNotificationRow .comment-body .comment-body-top {
+    font-size: 14px;
+    color: #111111;
+}
+
+.NotificationMenu .menu-dropdown ul.notification-list li.NotificationRow .comment-body .comment-body-top span.commented-obj {
+    color: #0b1a76;
+    font-weight: 600;
+}
+
+.NotificationMenu .menu-dropdown ul.notification-list li.HeaderNotificationRow .comment-body .comment-body-top span.commented-obj {
+    color: #111111;
+    font-weight: 700;
+}
+
+.Header .menu-dropdown ul li:hover {
+    background: var(--hover-bg-color);
+    color: #111;
+}
+
+.NotificationMenu .menu-dropdown ul.notification-list li.HeaderNotificationRow .comment-body .comment-body-excerpt {
+    margin: 8px 0 2px;
+    font-size: 14px;
+    color: #232323;
+}
+
+.NotificationMenu .menu-dropdown ul.notification-list li.NotificationRow .comment-body .comment-body-top {
+    font-size: 14px;
+    color: #1e1e1e;
+    margin-bottom: 12px;
+}
+
+.NotificationMenu .menu-dropdown ul.notification-list li.NotificationRow .comment-body .comment-body-bottom .User a {
+    font-size: 14px;
+    color: var(--brand-color);
+    font-weight: 600;
+}
+
+.NotificationMenu .menu-dropdown ul.notification-list li.NotificationRow {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 11px 23px;
+    margin-bottom: 0px;
+}
+
+
+
+
+
+
+/*Chain Cards*/
+.HomePage .home-content a.home-card {
+    position: relative;
+    display: -webkit-box;
+    display: flex;
+    float: left;
+    width: calc(50% - 15px);
+    padding: 18px 23px;
+    margin-right: 15px;
+    margin-bottom: 14px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1), 1px 1px 0px 0px rgba(0, 0, 0, 0.1);
+    /* background: #f7f7f7; */
+    text-decoration: none;
+    color: #111;
+    cursor: pointer;
+    /* border: 1px solid var(--border-color); */
+    border-radius: 3px;
+}
+
+/*Buttons*/
+a.btn.formular-button-primary,
+a.btn.formular-button-positive {
+    background-color: white;
+    background-image: none;
+    border: 1px solid #e9eaea;
+    color: var(--brand-color);
+}
+
+.ProposalHeader .thread-subscription {
+    background-color: white;
+    background-image: none;
+    border: 1px solid #e9eaea;
+    color: var(--brand-color);
+}
+
+input[type="submit"],
+button[type="submit"] {
+
+    background-color: white;
+    background-image: none;
+    border: 1px solid #e9eaea;
+    color: var(--brand-color);
+}
+
+input[type="submit"].formular-button-primary:hover,
+input[type="submit"].formular-button-positive:hover,
+input[type="button"].formular-button-primary:hover,
+input[type="button"].formular-button-positive:hover,
+button.formular-button-primary:hover,
+button.formular-button-positive:hover,
+a.btn.formular-button-primary:hover,
+a.btn.formular-button-positive:hover {
+    background-color: var(--brand-color);
+    background-image: none;
+    color: white;
+}
+
+/*User Tags and Profiles */
+.User.linkified a.user-display-name {
+    color: #ffffff !important;
+    background-color: var(--brand-color) !important;
+    font-weight: 700;
+    font-size: 13px;
+    border-radius: 3px;
+    padding: 2px 5px 3px 7px;
+}
+
+.User span.identity-icon {
+    margin-right: 4px;
+    font-size: 85%;
+}
+
+/*Discussion Rows*/
+a.DiscussionRow .discussion-content {
+    margin-left: 10px;
+}
+
+.DiscussionsPage h4 {
+    margin: 16px 0 4px;
+    text-align: left;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 400;
+}
+
+a.DiscussionRow .discussion-meta {
+    color: var(--brand-color);
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+a.DiscussionRow {
+    padding: 28px 0px 17px 22px;
+}
+
+a.DiscussionRow .discussion-meta .User a:hover,
+a.DiscussionRow .discussion-meta a.discussion-tag:hover {
+    color: var(--hover-bg-color);
+    text-decoration: none;
+}
+a.DiscussionRow .discussion-meta .User a,
+a.DiscussionRow .discussion-meta a.discussion-tag {
+    text-transform: capitalize;
+}
+
+a.DiscussionRow a.discussion-title {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23px;
+}
+
+.DiscussionsPage .WeeklyDiscussionListing .discussion-group-wrap,
+.DiscussionsPage .tag-forum .discussion-group-wrap {
+    width: 100%;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+
+.ProposalHeader,
+.ProposalBody,
+.ProposalComment,
+.CreateComment,
+.CreateCommentPlaceholder {
+    margin: 10px 0 0;
+    background-color: #fff;
+    box-shadow: none;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/*User*/
+.User .user-avatar-only {
+    box-shadow: 0 0 1px 0px rgba(0, 0, 0, 1);
+    border-radius: 9999px;
+    overflow: hidden;
+    margin: 0;
+    background: #fff;
+}
+
+
+/*Navigation*/
+a.NavigationItem.active {
+    background: #fff;
+    color: var(--brand-color);
+    text-decoration: none;
+    border-bottom: 1px solid var(--brand-color);
+    font-weight: 500 !important;
+}
+
+a.NavigationItem {
+    color: var(--brand-color)
+}
+a.NavigationItem:hover {
+    background: var(--hover-bg-color);
+    border-bottom: 1px solid var(--hover-bg-color);
+}
+
+.AccountMenu .no-chain-or-community-carat span.icon-down-open {
+    color: #191919;
+}
+
+a.NavigationItem .header-count {
+    color: white;
+    display: inline-block;
+    position: relative;
+    top: 0px;
+    font-size: 14px;
+    background: hsl(0, 100%, 43%);
+    padding: 2px 7px 2px 7px;
+    line-height: 1.25;
+    margin-left: 9px;
+    border-radius: 9999px;
+    font-weight: 700;
+}
+
+.Header .menu-selector:hover {
+    background: hsla(0, 0%, 96%, 1);
+    border-bottom: none;
+    box-shadow: inset 0px 0px 0px 0px var(--border-color);
+}
+
+.Header .menu-selector.active {
+    background: #eaeaea;
+}
+
+.AccountMenu .account-menu-item.my-account {
+    border-bottom: 1px solid var(--border-color);
+}
+.NavigationItem {
+    color: #fff;
+    text-decoration: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 14px;
+    padding: 18px 33px;
+    cursor: pointer;
+    font-weight: 400 !important;
+}
+
+.User.linkified a.user-display-name {
+    color: var(--brand-color) !important;
+    background: none;
+    font-weight: 700;
+    font-size: 13px;
+    border-radius: 0px;
+    background-color: transparent !important;
+    padding: 0px 1px 2px 0px;
+    border-bottom: 1px dotted var(--border-color);
+    text-decoration: none;
+}
+
+
+.ProposalHeader .discussion-meta > * {
+    color: #3a3a3a;
+    margin-right: 14px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+
+.ProposalHeader .proposal-title-row .title {
+    font-size: 22px;
+    font-weight: 500;
+    flex: 1;
+    line-height: 1.35;
+}
+
+
+
+.ChainLabel::selection {
+    color: #313131;
+    background: transparent;
+}
+
+.DiscussionsPage .WeeklyDiscussionListing .discussion-group-wrap,
+.DiscussionsPage .tag-forum .discussion-group-wrap {
+    box-shadow: none;
+}
+
+
+.InlineThreadComposer {
+    background: #fff;
+    margin: 6px 0 22px;
+    border: 1px solid #d6d6d6;
+    box-shadow: none;
+    cursor: text;
+    border-radius: 30px;
+}
+
+
+/*Council*/
+a.CollectiveMember,
+a.CouncilCandidate,
+a.CouncilElectionVoter {
+    display: -webkit-box;
+    display: flex;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: none;
+    background: #fff;
+    border-radius: 0;
+    margin: 0px 0px;
+    padding: 17px 20px 17px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: none;
+    color: #111;
+}
+
+a.CollectiveMember:hover,
+a.CouncilCandidate:hover,
+a.CouncilElectionVoter:hover {
+    -webkit-transform: none;
+    transform: none;
+    background-color: var(--hover-bg-color);
+}
+
+/*Chain Sidebar*/
+.TagSelector .tag-selector-item a.tag-name {
+    color: #999;
+    text-transform: capitalize;
+}
+
+/*Footer*/
+
+.Footer {
+    background: none;
+    border-top: 1px solid var(--border-color);
+}
+
+/*Typography*/
+.proposal-comment-text > .QuillFormattedText,
+.MarkdownFormattedText {
+    line-height: 31px;
+}
+
+.Header .menu-dropdown ul a {
+    color: #353535;
+    font-weight: 800;
+}
+
+.body-text > .QuillFormattedText,
+.MarkdownFormattedText {
+    line-height: 23px;
+}
+
+.AccountMenu .add-account-menu-item .addresses-badge {
+    color: white;
+}
+
+.comment-body-excerpt > .QuillFormattedText,
+.MarkdownFormattedText {
+    line-height: 19px;
+}
+
+.AccountMenu .account-menu-item.my-account .User a.user-display-name.username {
+    color: #0b1a76;
+}
+
+.ProposalHeader .Tags a {
+    text-transform: capitalize;
+}
+
+.ProposalRow .proposal-row-main .proposal-row-title {
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 28px;
+    line-height: 1.2;
+}
+
+.ProposalRow .proposal-row-main .proposal-row-metadata>* {
+   margin-right: 0px;
+}
+
+.ProposalsPage h4.proposals-subheader {
+    text-transform: capitalize;
+    color: #000;
+    letter-spacing: 0.4px;
+    margin-top: 26px;
+    font-family: "Work Sans","PT Sans","Inter",sans-serif;
+    font-weight: 100;
+    font-size: 17px;
+}
