@@ -5,11 +5,14 @@
     --brand-font-family: "PT Sans", "Source Sans Pro", "Inter", "sans-serif";
     --brand-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1), 1px 1px 0px 0px rgba(0, 0, 0, 0.1);
     --hover-bg-color: #f5f5f5;
+    --input-background: #f5f5f5;
+    --attention-color: hsl(0, 100%, 43%);
+
 }
 
 
 
-html {
+body {
     font-family: var(--brand-font-family);
     background-color: #fff;
 }
@@ -26,6 +29,16 @@ html {
     background: #fff;
 }
 
+h2 {
+    font-weight: 600 !important;
+    font-size: 15px !important;
+}
+
+h4 {
+    font-family: var(--brand-font-family) !important;
+    font-weight: 400 !important;
+    font-size:19px;
+}
 
 /*Header*/
 .Header {
@@ -264,12 +277,13 @@ a.btn.formular-button-positive:hover {
 
 /*User Tags and Profiles */
 .User.linkified a.user-display-name {
-    color: #ffffff !important;
-    background-color: var(--brand-color) !important;
-    font-weight: 700;
-    font-size: 13px;
-    border-radius: 3px;
-    padding: 2px 5px 3px 7px;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 0px 1px 2px 0px;
+    color: var(--brand-color) !important;
+    background: none;
+    border: none;
+    text-decoration: none;
 }
 
 .User span.identity-icon {
@@ -373,7 +387,7 @@ a.NavigationItem .header-count {
     position: relative;
     top: 0px;
     font-size: 14px;
-    background: hsl(0, 100%, 43%);
+    background: var(--attention-color);
     padding: 2px 7px 2px 7px;
     line-height: 1.25;
     margin-left: 9px;
@@ -405,18 +419,6 @@ a.NavigationItem .header-count {
     padding: 18px 33px;
     cursor: pointer;
     font-weight: 400 !important;
-}
-
-.User.linkified a.user-display-name {
-    color: var(--brand-color) !important;
-    background: none;
-    font-weight: 700;
-    font-size: 13px;
-    border-radius: 0px;
-    background-color: transparent !important;
-    padding: 0px 1px 2px 0px;
-    border-bottom: 1px dotted var(--border-color);
-    text-decoration: none;
 }
 
 
@@ -456,6 +458,9 @@ a.NavigationItem .header-count {
     cursor: text;
     border-radius: 30px;
 }
+.InlineThreadComposer input[name='thread-composer'], .InlineThreadComposer input[name='link-title'] {
+    background-color: white;
+}
 
 
 /*Council*/
@@ -494,7 +499,6 @@ a.CouncilElectionVoter:hover {
 }
 
 /*Footer*/
-
 .Footer {
     background: none;
     border-top: 1px solid var(--border-color);
@@ -503,7 +507,7 @@ a.CouncilElectionVoter:hover {
 /*Typography*/
 .proposal-comment-text > .QuillFormattedText,
 .MarkdownFormattedText {
-    line-height: 31px;
+    line-height: 24px;
 }
 
 .Header .menu-dropdown ul a {
@@ -540,8 +544,8 @@ a.CouncilElectionVoter:hover {
     line-height: 1.2;
 }
 
-.ProposalRow .proposal-row-main .proposal-row-metadata>* {
-   margin-right: 0px;
+.ProposalRow .proposal-row-main .proposal-row-metadata > * {
+    margin-right: 0px;
 }
 
 .ProposalsPage h4.proposals-subheader {
@@ -549,7 +553,201 @@ a.CouncilElectionVoter:hover {
     color: #000;
     letter-spacing: 0.4px;
     margin-top: 26px;
-    font-family: "Work Sans","PT Sans","Inter",sans-serif;
+    font-family: "Work Sans", "PT Sans", "Inter", sans-serif;
     font-weight: 100;
     font-size: 17px;
+}
+
+
+/*Settings Page*/
+.ObjectPage .page-container {
+    background: white;
+}
+
+.ObjectPage .forum-container {
+    border: none;
+    box-shadow: none;
+}
+
+.SettingsWell {
+    background: white;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="password"],
+textarea {
+    border: none;
+    border-radius: 2px;
+    background-color: var(--input-background);
+}
+
+select {
+    border: none;
+    border-radius: 2px;
+}
+
+input[type="submit"],
+button[type="submit"] {
+    background-color: white;
+    background-image: none;
+    border: 1px solid var(--brand-color);
+    color: var(--brand-color);
+    font-weight: 500;
+}
+
+.AccountsWell {
+    background: white;
+    border-top: 1px solid var(--border-color);
+}
+
+.AccountRow {
+    padding: 15px 5px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.AccountRow.selected {
+    background: #e0fff5;
+}
+
+.AccountRow .action-col button,
+.AccountRow .action-col a {
+    margin-left: 10px;
+    border: 1px solid var(--attention-color);
+    background-color: white;
+    background: none;
+    color: var(--attention-color);
+    font-weight: 300;
+}
+
+.AccountsWell .add-account {
+    margin-top: 18px;
+    background: white;
+    color: var(--brand-color);
+    border: 1px solid var(--brand-color);
+    font-weight: 400;
+}
+
+.SendEDGWell {
+    padding: 24px 30px 28px;
+    background: white;
+    border-radius: 0;
+    margin: 20px 0;
+    border-top: 1px solid var(--border-color);
+}
+
+
+/*Switch Address Modal*/
+.Modal .compact-modal-title {
+    padding: 25px 30px 0px;
+    background: #ffffff;
+    color: var(--brand-color);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.AddressesModal .compact-modal-title h3 {
+    font-size: 19px;
+    font-weight: 500;
+}
+
+/*Profile Page*/
+
+.ProfilePage .Tabs {
+    width: 100%;
+    background: #fff;
+    border-radius: 0px;
+    box-shadow: none;
+    padding: 31px 43px 0px 137px !important;
+    border-right: 1px solid var(--border-color);
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+}
+
+.ProfileHeader{
+    border-bottom: 1px solid var(--border-color);
+    box-shadow:none;
+}
+
+.ProfileBio {
+    box-shadow: none;
+    border: none;
+}
+
+
+.ProfilePage .Tabs .tab-bar {
+    padding-bottom: 10px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.ProfilePage .forum-row {
+    margin-top: 0px;
+}
+
+.ProfileCommentGroup .summary {
+    margin-bottom: 18px;
+}
+
+.ProfileHeader .bio-actions a.btn, .ProfileHeader .bio-actions button {
+    background-color: white !important;
+    border: 1px solid var(--brand-color) !important;
+    background-image: none !important;
+    color: var(--brand-color);
+    border-radius: 2px;
+    padding: 5px 15px;
+    margin-left: 8px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    font-weight: 200;
+}
+
+.ProfileHeader .cover {
+    width: calc(100% + 24px * 2);
+    height: 52px;
+    background: none; 
+   
+    margin: 0 -24px;
+    /* display: none; */
+}
+.Tabs a.tab-entry {
+    color: var(--brand-color);
+    font-size: 17px;
+    font-weight:300;
+}
+
+.Tabs a.tab-entry.active {
+    color: #111;
+    border-bottom: 1px solid var(--brand-color);
+}
+
+.ProfileProposal {
+    margin: 0px 0 30px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 32px;
+    border-top: none;
+    padding-top: 0px;
+}
+
+.ProfileCommentGroup {
+    margin: 26px 0 32px;
+    border-bottom: 1px solid var(--border-color);
+    padding: 1px 0px 31px 0px;
+}
+
+.ProfileProposal .proposal-title {
+    color: #111111 !important;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+.ProfileContent a.btn {
+    background-color: white !important;
+    border: 1px solid var(--brand-color) !important;
+    background-image: none !important;
+    color: var(--brand-color);
+    border-radius: 4px;
 }
