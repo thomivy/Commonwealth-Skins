@@ -1,0 +1,130 @@
+.layout-container {
+    color: rgb(66, 66, 66) !important;
+    border-width: 1px !important;
+    border-style: solid !important;
+    border-color: #dae3ed !important;
+    border-image: initial !important;
+    background: hsl(213, 8%, 97%) !important;
+}
+
+.Sidebar {
+    background: #050c26;
+}
+
+.Sidebar .SidebarHeader {
+    border-bottom: 1px solid #454a5d;
+}
+    
+
+.cui-list-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-bottom: solid 1px hsl(213, 8%, 97%);
+    color: #a8c5e8;
+}
+
+.MobileSidebarHeader .ChainStatusModule .chain-url, .Sidebar .ChainStatusModule .chain-url {
+    color: white;
+}
+
+.Sidebar .SidebarModule>.cui-list .cui-list-item {
+    font-size: 16px;
+    font-weight: 400;
+    padding: 3px 12px;
+    border-radius: 4px;
+    border: none;
+    white-space: nowrap;
+}
+
+.ProposalBodyAvatar {
+  padding-left: 15px;  
+}
+
+.ProposalBodyText {
+    padding-right: 14%;
+}
+.user-avatar-only {
+    width: 60px;
+    height: 60px; 
+}
+
+.SidebarQuickSwitcher {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: 18px 14px;
+    width: 64px;
+    background: #050c26;
+    z-index: 3;
+    border-right: 1px #454a5d solid;
+}
+
+.cui-button {
+    color: #fafafa;
+}
+
+.RightSidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 230px;
+    background: #fff;
+    border: 1px hsl(213, 8%, 92%) solid;
+    margin: 9px;
+    border-radius: 2px;
+}
+
+.Sublayout .sublayout-body {
+    position: relative;
+    min-height: calc(100vh - 140px);
+    padding-left: 17px;
+    background: #fff;
+    border: 1px hsl(213, 8%, 92%) solid;
+    padding-right: 17px;
+}
+
+
+.ListingRow .row-left .title-container .row-header, .ListingRow .row-left .title-container .row-header a {
+    color: #162940;
+    font-size: 19px;
+    text-decoration: none;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+.ListingRow {
+    display: flex;
+    padding: 17px 20px;
+    margin: 0 -20px;
+    cursor: pointer;
+    border-bottom: 1px hsl(213, 8%, 92%) solid;
+}
+
+
+.cui-button.cui-primary, .cui-button-group.cui-primary .cui-button {
+    color: #fff;
+    background: #050c26;
+    border: solid 1px #050c26;
+    box-shadow: none;
+    font-weight: normal !important;
+}
+
+
+.MobileSidebarHeader .ChainStatusModule, .Sidebar .ChainStatusModule {
+    position: absolute;
+    bottom: 14px;
+    left: 15px;
+    margin-bottom: 0 !important;
+    width: calc(100% - 34px);
+    max-width: calc(100% - 34px);
+    height: 72px;
+    background: #050c26;
+    padding: 16px 18px;
+    border-radius: 4px;
+    line-height: 1.2;
+    font-size: 0.94rem;
+    border: 1px #e9eaec solid;
+}
