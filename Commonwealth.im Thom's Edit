@@ -77,6 +77,12 @@
     border-radius: 2px;
 }
 
+.ListingRow .row-left .pinned {
+    position: absolute;
+    left: -27px;
+}
+
+
 .Sublayout .sublayout-body {
     position: relative;
     min-height: calc(100vh - 140px);
