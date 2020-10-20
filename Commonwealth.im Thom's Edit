@@ -15,6 +15,9 @@
     border-bottom: 1px solid #454a5d;
 }
     
+.MobileSidebarHeader .ChainStatusModule, .Sidebar .ChainStatusModule {
+    border: 1px #454b5c solid;
+}
 
 .cui-list-item {
     position: relative;
