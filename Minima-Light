@@ -1,0 +1,528 @@
+/* Variables */
+:root {
+    --lightBorder: hsl(0 0% 94% / 1);
+    --lightBackground: #fff;
+    --darkBackground: #050c26;
+    --lightFontColor: #323232;
+    /*    --boxShadow: 0 0 3px 0px #0000000a, 0 0 5px 1px #0000000a;
+    --boxShadowTall: 7px 8px 3px 0px rgb(0 0 0 / 0.02); */
+    --boxShadowInset: inset 7px 0px 3px 0px rgb(0 0 0 / 0.02);
+    --userFont: Inter;
+    --bodyFont: Roboto;
+    --subtitleColor: #167677;
+    --typeBlack: hsl(216, 7%, 3%);
+}
+
+
+.layout-container {
+    color: rgb(66, 66, 66) !important;
+    border: 1px solid var(--lightBorder) !important;
+    border-image: initial !important;
+}
+
+
+
+
+.ListingRow:hover {
+    font-weight: 500;
+}
+
+.ListingRow .row-left .title-container .row-subheader {
+    margin-top: 7px;
+}
+
+/*Inverts the order of the topic and username*/
+.ListingRow .row-left .title-container .row-subheader {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+
+/* Reactions, Comments */
+.ReactionButton:hover,
+.ReactionButton.active {
+    color: #3960f4;
+    border-color: var(--lightBorder);
+    background-color: hsl(0 0% 97% / 1);
+}
+
+/* User Controls Bar */
+.cui-button {
+    padding: 0 18px;
+    font-size: 16.8px;
+    height: 36px;
+    min-height: 36px;
+    line-height: 36px;
+    color: var(--lightFontColor);
+    font-weight: normal;
+    display: inline-flex;
+    vertical-align: middle;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-decoration: none;
+    transition: none;
+    border: 1px solid var(--lightBorder);
+    background: #fff;
+}
+
+.NotificationsMenuButton .notification-count {
+    background: none;
+    border-radius: 0;
+    padding: 3px 0px;
+    color: #d4302f;
+    font-weight: 500;
+}
+
+.NotificationsMenuButton.has-notifications {
+    border-color: #f0b8b7;
+}
+
+/* Typography */
+.ViewProposalPage .ProposalHeaderTopics a:link,
+.ViewProposalPage .ProposalHeaderTopics a:visited,
+.ViewProposalPage .ProposalHeaderTopics .User a.user-display-name,
+.ViewProposalPage .ProposalHeaderOnchainId a:link,
+.ViewProposalPage .ProposalHeaderOnchainId a:visited,
+.ViewProposalPage .ProposalHeaderOnchainId .User a.user-display-name,
+.ViewProposalPage .ProposalHeaderOnchainStatus a:link,
+.ViewProposalPage .ProposalHeaderOnchainStatus a:visited,
+.ViewProposalPage .ProposalHeaderOnchainStatus .User a.user-display-name,
+.ViewProposalPage .ProposalBodyAuthor a:link,
+.ViewProposalPage .ProposalBodyAuthor a:visited,
+.ViewProposalPage .ProposalBodyAuthor .User a.user-display-name,
+.ViewProposalPage .ProposalBodyCreated a:link,
+.ViewProposalPage .ProposalBodyCreated a:visited,
+.ViewProposalPage .ProposalBodyCreated .User a.user-display-name,
+.ViewProposalPage .ProposalBodyLastEdited a:link,
+.ViewProposalPage .ProposalBodyLastEdited a:visited,
+.ViewProposalPage .ProposalBodyLastEdited .User a.user-display-name,
+.ViewProposalPage .ProposalBodyDelete a:link,
+.ViewProposalPage .ProposalBodyDelete a:visited,
+.ViewProposalPage .ProposalBodyDelete .User a.user-display-name,
+.ViewProposalPage .ProposalBodyEdit a:link,
+.ViewProposalPage .ProposalBodyEdit a:visited,
+.ViewProposalPage .ProposalBodyEdit .User a.user-display-name,
+.ViewProposalPage .ProposalBodyDelete a:link,
+.ViewProposalPage .ProposalBodyDelete a:visited,
+.ViewProposalPage .ProposalBodyDelete .User a.user-display-name,
+.ViewProposalPage .ProposalBodyCancelEdit a:link,
+.ViewProposalPage .ProposalBodyCancelEdit a:visited,
+.ViewProposalPage .ProposalBodyCancelEdit .User a.user-display-name,
+.ViewProposalPage .ProposalBodySaveEdit a:link,
+.ViewProposalPage .ProposalBodySaveEdit a:visited,
+.ViewProposalPage .ProposalBodySaveEdit .User a.user-display-name,
+.ViewProposalPage .ViewCountBlock a:link,
+.ViewProposalPage .ViewCountBlock a:visited,
+.ViewProposalPage .ViewCountBlock .User a.user-display-name,
+.ViewProposalPage .ProposalHeaderExternalLink a:link,
+.ViewProposalPage .ProposalHeaderExternalLink a:visited,
+.ViewProposalPage .ProposalHeaderExternalLink .User a.user-display-name {
+    color: none;
+}
+
+.ViewProposalPage .ProposalHeaderTopics,
+.ViewProposalPage .ProposalHeaderOnchainId,
+.ViewProposalPage .ProposalHeaderOnchainStatus,
+.ViewProposalPage .ProposalBodyAuthor,
+.ViewProposalPage .ProposalBodyCreated,
+.ViewProposalPage .ProposalBodyLastEdited,
+.ViewProposalPage .ProposalBodyDelete,
+.ViewProposalPage .ProposalBodyEdit,
+.ViewProposalPage .ProposalBodyDelete,
+.ViewProposalPage .ProposalBodyCancelEdit,
+.ViewProposalPage .ProposalBodySaveEdit,
+.ViewProposalPage .ViewCountBlock,
+.ViewProposalPage .ProposalHeaderExternalLink {
+    font-size: 0.7rem;
+    display: inline-block;
+    color: #999;
+    margin-right: 17px;
+}
+
+.ViewProposalPage .ProposalBodyAuthor a:link,
+.ViewProposalPage .ProposalBodyAuthor a:visited,
+.ViewProposalPage .ProposalBodyAuthor .User a.user-display-name {
+    color: var(--typeBlack);
+}
+
+.QuillFormattedText {
+    line-height: 1.45;
+    word-break: break-word;
+    font-family: var(--bodyFont);
+    font-size: 15.5px;
+    font-weight: 400;
+    letter-spacing: -0.04px;
+}
+
+
+.User.linkified a.user-display-name {
+    cursor: pointer;
+    FONT-FAMILY: var(--userFont);
+    font-size: 13px;
+    font-weight: 500;
+    /* color: white;
+    background-color: #5c59ff; */
+    padding: 1px 5px 3px 5px;
+}
+
+.user.linkified {
+    font-size: 10px;
+}
+
+.User.linkified a.user-display-name {
+    padding: 1px 14px 3px 0px;
+}
+
+.DiscussionRow .row-left .row-subheader a.proposal-topic {
+    margin-right: 18px;
+    color: var(--subtitleColor);
+    font-size: 14px;
+    background-color: hsl(144, 100%, 96%);
+    padding: 1px 6px 3px 6px;
+    border-radius: 9px;
+}
+
+/*Hides the circle icon to the left of the thread topic*/
+.DiscussionRow .row-left .row-subheader a.proposal-topic span.proposal-topic-icon {
+    display: none;
+}
+
+.DiscussionRow .row-left .row-subheader .User a {
+    display: inline-block;
+    text-decoration: none;
+    color: #303030;
+
+    font-size: 13px;
+    font-weight: 400;
+}
+
+
+
+
+.ListingRow .row-left .pinned {
+    position: absolute;
+    left: -27px;
+}
+
+.Sublayout {
+    padding: 0;
+}
+
+.Sublayout .sublayout-grid {
+    max-width: 100%;
+}
+
+.Sublayout .sublayout-header {
+    width: 100%;
+    height: 77px;
+    position: fixed;
+    margin-top: 0;
+    z-index: 10;
+    background-color: var(--lightBackground);
+    border-bottom: 1px solid var(---lightBorder);
+    top: 0px;
+}
+
+.Sublayout .sublayout-header .sublayout-header-right {
+    position: fixed;
+    right: 231px;
+    z-index: 10;
+    padding-top: 31px;
+}
+
+.sublayout-header-left {
+    padding-top: 31px;
+    padding-left: 36px;
+}
+
+.Sublayout .sublayout-body {
+    position: relative;
+    min-height: calc(100vh - 140px);
+    padding-left: 80px;
+    background: #fff;
+    border-top: 1px solid var(--lightBorder);
+    padding-right: 15%;
+    margin-top: 72px;
+}
+
+
+
+.ListingRow .row-left .title-container .row-header,
+.ListingRow .row-left .title-container .row-header a {
+    color: #00234e;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+.Listing {
+    padding-left: 21px;
+}
+
+.ListingRow {
+    display: flex;
+    padding: 17px 0px;
+    margin: 0 0px;
+    cursor: pointer;
+    border-bottom: 1px var(--lightBorder) solid;
+}
+
+/* Sidebar */
+/* Dark Mode 
+ .cui-button {color: #fafafa; } 
+ .sidebar {background: #050c26; };
+.Sidebar .SidebarHeader {border-bottom: 1px solid #454a5d;}
+*/
+.Sidebar .SidebarModule > .cui-list .cui-list-item {
+    font-size: 16px;
+    font-weight: 400;
+    padding: 2.5px 15px !important;
+    border-radius: 4px;
+    border: none;
+    white-space: nowrap;
+}
+
+.SidebarQuickSwitcherItem {
+    margin-bottom: 10px;
+}
+
+.cui-list-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-bottom: solid 1px var(--lightBorder);
+    color: #2d2d2d;
+}
+
+.SidebarQuickSwitcher {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: 18px 14px;
+    width: 64px;
+    /*  Dark Mode    background: #050c26; */
+    background: #fff;
+    z-index: 3;
+    /*  Dark Mode   border-right: 1px #454a5d solid; */
+    border-right: 1px var(--lightBorder) solid;
+}
+
+.SidebarQuickSwitcher .ChainIcon,
+.SidebarQuickSwitcher .CommunityIcon {
+    opacity: 0.1;
+}
+
+.SidebarQuickSwitcher .ChainIcon:hover,
+.SidebarQuickSwitcher .CommunityIcon:hover {
+    opacity: 1;
+}
+
+.Sidebar {
+    /*    background: #050c26; */
+    background: #fff;
+    border-right: 1px solid var(--lightBorder);
+    box-shadow: var(--boxShadowInset);
+}
+.Sidebar .SidebarHeader {
+    border-bottom: 1px solid var(--lightBorder);
+}
+
+.Sidebar .SidebarModule > .cui-list .cui-list-item.cui-active,
+.Sidebar .SidebarModule > .cui-list .cui-list-item {
+    background: #fff !important;
+    color: var(--lightFontColor);
+    border: none;
+
+    border-radius: 9px
+}
+
+.SidebarModule > .cui-list .cui-list-item:active {
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.cui-list-item.cui-active:hover {
+    background: #fff !important;
+    color: var(--lightFontColor);
+    border: 1px solid #ff8400;
+    padding-bottom: 8px;
+    font-weight: 500;
+    border-radius: 9px
+}
+
+.Sidebar .SidebarModule > .cui-list .cui-list-item.cui-active .proposal-topic-icon,
+.Sidebar .SidebarModule > .cui-list .cui-list-item.cui-active:hover .proposal-topic-icon {
+    border-color: #ff8400;
+}
+
+.Sidebar .SidebarModule > .cui-list .cui-list-item {
+    font-size: 17px;
+    font-weight: 400;
+    padding: 6px 5px;
+    border-radius: 4px;
+    border: none;
+    white-space: nowrap;
+}
+
+.ListingSidebar .user-activity .MostActiveUser .User .user-display-name {
+    font-weight: 400;
+}
+
+.User.linkified a.user-display-name {
+    cursor: pointer;
+    FONT-FAMILY: var(--userFont);
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.Sidebar .SidebarModule > .cui-list .cui-list-item.cui-active .cui-icon svg,
+.Sidebar .SidebarModule > .cui-list .cui-list-item.cui-active:hover .cui-icon svg {
+    stroke: #4e9a97;
+}
+
+.RightSidebar {
+    border-left: 1px var(--lightBorder) solid;
+    margin: 0;
+    position: fixed;
+    top: 64px;
+    bottom: 0;
+    right: 0;
+    width: 230px;
+    background: #fff;
+    border-radius: 2px;
+}
+
+.cui-button.cui-primary,
+.cui-button-group.cui-primary .cui-button {
+    color: #fff;
+    background: #050c26;
+    border: solid 1px var(--lightBorder);
+    box-shadow: none;
+    font-weight: normal !important;
+}
+
+/* Chain Status Module */
+.ChainStatusModule,
+.Sidebar .ChainStatusModule {
+    position: absolute;
+    bottom: 14px;
+    left: 15px;
+    margin-bottom: 0 !important;
+    width: calc(100% - 34px);
+    max-width: calc(100% - 34px);
+    height: 65px;
+    background: var(--lightBackground);
+    padding: 13px 26px;
+    line-height: 1.07;
+    font-size: 0.94rem;
+    box-shadow: var(--boxShadowTall);
+    border: 1px solid #00000021;
+    border-radius: 7px;
+}
+.MobileSidebarHeader .ChainStatusModule .chain-url,
+.Sidebar .ChainStatusModule .chain-url {
+    color: var(--lightFontColor);
+}
+
+
+/* In Threads */
+.proposal-content-left .ProposalBodyAvatar {
+    padding-top: 4px;
+}
+
+.ProposalBodyAvatar {
+    padding-left: 0px;
+    padding-top: 23px;
+}
+
+.user-avatar-only {
+    width: 60px;
+    height: 60px;
+}
+
+
+.ViewProposalPage .ProposalBodyAuthor {
+    font-weight: 400;
+    color: var(--lightFontColor) !important;
+}
+
+
+.ProposalBodyText {
+    padding-right: 14%;
+}
+
+
+.ViewProposalPage .ProposalHeader .proposal-content-right {
+    flex: 1;
+    /* margin-left: 89px; */
+    border-left: 1px solid var(--lightBorder);
+    margin-left: 89px;
+    padding-left: 22px;
+}
+
+
+.ViewProposalPage .ProposalHeader .proposal-content {
+    display: flex;
+    padding-top: 30px;
+    border-bottom: 1px solid var(--lightBorder);
+}
+
+.ViewProposalPage .proposal-content,
+.ViewProposalPage .ProposalComment {
+    border-bottom: 1px solid var(--lightBorder);
+}
+
+
+.ViewProposalPage .ProposalComment .comment-body {
+    /* padding-left: 105px; */
+    border-left: 1px solid var(--lightBorder);
+    margin-left: 89px;
+    /* border-bottom: 1px solid var(--lightBorder); */
+}
+
+.ViewProposalPage .ProposalComment .comment-body-bottom {
+    padding: 5px 24px 23px;
+}
+
+
+.ViewProposalPage .ProposalHeader,
+.ViewProposalPage .ProposalComment,
+.ViewProposalPage {
+    padding-top: 0;
+}
+
+
+
+.ViewProposalPage .ProposalComment .comment-body {
+    padding-left: 0px;
+}
+
+.comment-body-content {
+    Padding: 21px 0px 0px 21px;
+}
+
+.ViewProposalPage .ProposalComment .comment-body-bottom {
+    padding: 4px 21px 18px;
+}
+
+.ViewProposalPage .ProposalHeader .proposal-content .ProposalBodyReaction {
+    margin-top: 18px;
+    margin-bottom: 14px;
+}
+
+.ViewProposalPage .ProposalComment .comment-body-top {
+    display: grid;
+    position: absolute;
+    left: 0px;
+    padding-top: 72px;
+    width: 82px;
+}
+
+.ProposalBodyCreated,
+.ProposalBodyLastEdited {
+    color: #b7b7b7 !important;
+}
