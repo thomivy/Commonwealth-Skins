@@ -20,7 +20,10 @@
     border-image: initial !important;
 }
 
-
+.sublayout-header-left {
+    padding-left: 100px;
+    padding-top: 36px;
+}
 
 
 .ListingRow:hover {
@@ -232,10 +235,6 @@
     padding-top: 31px;
 }
 
-.sublayout-header-left {
-    padding-top: 31px;
-    padding-left: 36px;
-}
 
 .Sublayout .sublayout-body {
     position: relative;
@@ -243,7 +242,6 @@
     padding-left: 80px;
     background: #fff;
     border-top: 1px solid var(--lightBorder);
-    padding-right: 15%;
     margin-top: 72px;
 }
 
@@ -252,7 +250,7 @@
 .ListingRow .row-left .title-container .row-header,
 .ListingRow .row-left .title-container .row-header a {
     color: #00234e;
-    font-size: 20px;
+    font-size: 1.04em;
     text-decoration: none;
     font-weight: 400;
     line-height: 21px;
